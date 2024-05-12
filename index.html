@@ -1,36 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Id</title>
-   <link rel="stylesheet" href="style1.css">
-    
-<body>
-    <div class="praent">
-        <header>
-            <H1>Hello</H1>
-            <h4>Thanks For Click</h4>
-        </header>
-            <section>
-               <img class="instagram-logo" src="instagram-logo.png" alt="">
-               <img class="whatsapp-logo" src="whatsapp-logo.svg" alt="">
-            </section>
-            <footer>
-                <a href="https://www.instagram.com/bimal_baski143/">
-                    <button class="subcribe">
-                        instagram
-                    </button>
-                </a>
-                <a href="https://chat.whatsapp.com/E6IV87aVTFA27rMbAhHtP7">
-                    <button class="whatapp">
-                        whatsapp
-                    </button>
-                </a>
-                
-            </footer>
-    </div>
-   
-    
-</body>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Ham Aap Se Pyaar karte Hai</h1>
+                <h1 class = "header_text">Agar Aap Hame Baat Krna Chahte hai To Click Yes</h1>
+                <h1 class = "header_text">Nahi To Click No</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "http://127.0.0.1:5500/love%20web/old/index.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
 </html>
